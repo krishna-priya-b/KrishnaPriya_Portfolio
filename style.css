@@ -1,0 +1,230 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    /* outline: 2px solid rgb(255, 0, 0) !important; */
+}
+:root{
+    --body-colour: #081D22;
+    --body-colour2:#2f3e51;
+    --heading-colour: #90f109;
+    --icon-colour: #f8ff32;
+    --iconHover-colour: #10dbff;
+    --text-colour: white;
+}
+body{
+    background-color: var(--body-colour);
+}
+.white-text{
+    color: white;
+}
+/*------------------------------------Navbar--------------  */
+header{
+    background-color: var(--body-colour2);
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.k{
+    width: 25px;
+    padding: 2px;
+}
+li{
+    list-style: none;
+}
+.myNav-link{
+    color: white;
+    text-decoration: none;
+    transition: 0.7s ease;
+}
+.myNav-link:hover{
+    color: var(--iconHover-colour);
+}
+.myNavbar{
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.myNav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.hamburger-menu{
+    display: none;
+    cursor: pointer;
+}
+.h-bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+/*------------------------------------Hello-----------------*/
+#hello{
+    width: 100%;
+    height: 100vh;
+}
+.hello-text{
+    margin-block-start: 20px;
+    font-size: 30px;
+}
+.hello-text h1{
+    font-size: 60px;
+    margin-block-start: 20px;
+}
+.hello-text span{
+    color: var(--iconHover-colour);
+}
+/*------------------------------------Projects------------- */
+
+/*------------------------------------About Me--------------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 80%;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.subtitle{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+/*------------------------------------Form------------------*/
+#contact{
+    display: flex;
+    justify-content: center;
+    margin-block-end: 50px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.form-div{
+    width: 450px;
+    margin: 5px;
+    position: relative;
+}
+.form-span{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+.form-input{
+    width: 100%;
+    background-color: var(--body-colour2);
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+}
+::placeholder{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.btn{
+    padding-inline: 1rem;
+    padding-block: 0.6rem;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: black;
+    background-color: var(--iconHover-colour);
+    border: 2px solid rgba(112, 111, 211, 0);
+    border-radius: 15px;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+}
+.btn:hover{
+    background-color: var(--heading-colour)
+}
+.btn:focus{
+    color: black;
+    border: 2px solid none;
+    box-shadow: 0px 0px 0px 1px var(--icon-colour);
+    animation: btn-anim .3s forwards;
+}
+@keyframes btn-anim{
+    100%{
+        box-shadow: 0px 0px 5px 5px rgba(112, 111, 211, 0);
+    }
+}
+
+/*------------------------------------Footer----------------*/
+footer{
+    margin-block-start: 20px;
+    height: 200px;
+    background-color: var(--body-colour2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 50px;
+}
+.links{
+    display: flex;
+    gap: 20px;
+}
+.mailid{
+    margin: 20px;
+}
+
+/*------------------------------------Media queries---------*/
+
+@media(max-width:768px){ /*Small screen*/
+    /* ---------------------NavBar------------------------- */
+    .hamburger-menu{
+        display: block;
+    }
+    .hamburger-menu.active .h-bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger-menu.active .h-bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger-menu.active .h-bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .myNav-menu{
+        position: fixed;
+        right: -100%;
+        top: 50px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--body-colour2);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .myNav-item{
+        margin: 16px 0;
+    }
+    .myNav-menu.active{
+        right: 0;
+    }
+}

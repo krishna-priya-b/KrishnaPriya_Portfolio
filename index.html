@@ -54,8 +54,39 @@
       </div>
     </section>
 
-    <section id="projects">
-      
+    <section id="my-work">
+      <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="./images/Apple2.png" alt="">
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>Someting Someting Something</p>
+              <a href="#">Visit website</a>
+              <a href="#">View Code</a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/coffee.png" alt="">
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>Someting Someting Something</p>
+              <a href="#">Visit website</a>
+              <a href="#">View Code</a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="./images/coffee.png" alt="">
+            <div class="layer">
+              <h3>Social Media App</h3>
+              <p>Someting Someting Something</p>
+              <a href="#">Visit website</a>
+              <a href="#">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="about">
@@ -71,12 +102,46 @@
             <p>Fast forward to today, having proudly earned my certification, I can confidently say that diving into this coding boot camp was a game-changer. I thrive on soaking up new technologies and infusing my creativity to craft extraordinary things.</p>
           </div>
         </div>
+        <div class="cv">
+          <a href="./images/CV.PDF" download class="btn" >Download CV</a>
+        </div>
       </div>
     </section>
 
-    <section id="contact">
 
+    <section id="contact">       
+      <form name="contact-form"
+      action="https://script.google.com/macros/s/AKfycbzZjSVN7jgKHchRBwAkfAy1lGDVaSXMS7D5a6WNsET63EZyu87oN_Azrwu5M04CZ0VQeA/exec" 
+      onsubmit="return validateAll()" 
+      method="post" >
+
+        <h2 class="white-text" data-aos="fade-up">Contact Me</h2>
+
+        <div class="form-div" data-aos="zoom-in">
+          <input type="text" id="name" name="name" class="form-input" placeholder="Your Name">
+          <span id="name-varifiy" class="form-span"></span>
+        </div>
+
+        <div class="form-div" data-aos="zoom-in">
+          <input type="text" id="phone" name="phone" class="form-input" placeholder="Phone Number">
+          <span id="phone-varifiy" class="form-span"></span>
+        </div>
+
+        <div class="form-div" data-aos="zoom-in">
+          <input type="text" id="email" name="email" class="form-input" placeholder="Email ID">
+          <span id="email-varifiy" class="form-span"></span>
+        </div>
+
+        <div class="form-div" data-aos="zoom-in">
+          <textarea name="message" id="message" rows="10" class="form-input" placeholder="Message"></textarea>
+          <span id="message-varifiy" class="form-span"></span>
+        </div>
+
+        <button type="submit" class="btn">Submit</button>
+      </form>
     </section>
+
+
  
 
       <footer>

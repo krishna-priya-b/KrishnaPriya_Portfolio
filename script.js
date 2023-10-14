@@ -79,7 +79,10 @@ function validateMessage(){
         return false;
     }
     else {
-        return true
+        messageVarify.innerHTML= "\u2713";
+        messageVarify.style.fontSize= "1rem"
+        messageVarify.style.color= "#90f109"
+        return true;
     }
    
 }
